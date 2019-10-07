@@ -1,0 +1,50 @@
+.wapper
+  .side-bar
+    .side-header
+      .side-header__box
+        %p.side-header__box__name
+          aaa
+        %ul.side-header__box__lists
+          %li.side-header__lists__new-group
+            = link_to do
+              = fa_icon 'edit', class: 'icon'
+          %li.side-header__lists__edit-user
+            = link_to do
+              = fa_icon 'cog', class: 'icon'
+    .groups
+      .group
+        .group__name
+          aaa
+        .group__message
+          こんにちは
+
+  .chat-main
+    .main-header
+      .main-header__left-box
+        .main-header__left-box__current-group
+          aaa
+        .main-header__left-box__member-list
+          Member : 
+          .main-header__left-box__member-list__member
+            aaa
+      .main-header__edit-button
+        Edit
+
+    .messages
+      .message
+        .upper-info
+          .upper-info__talker
+            aaa
+          .upper-info__date
+            2019/00/00
+        .lower-massage
+          .lower-message__content
+            こんにちは
+    .form
+      %form
+        %input.form__message{ type: 'text', placeholder: 'type a message'}
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}

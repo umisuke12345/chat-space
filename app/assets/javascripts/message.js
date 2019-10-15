@@ -37,12 +37,11 @@ $(function(){
       $('#message_content').val('');
       $( ".form__submit").prop( "disabled", false );
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-      $('.form__message').val('');
+      $('.form'
       $('.hidden').val('');
     })
     .fail(function(){
       alert('エラー');
     })
-    
   })
 });

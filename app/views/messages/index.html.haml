@@ -1,5 +1,4 @@
 .wrapper
-
   .side-bar
     .side-header
       .side-header__box
@@ -14,7 +13,6 @@
               = fa_icon 'cog', class: 'icon'
 
     .groups
-      .group
       - current_user.groups.each do |group|
         = link_to group_messages_path(group) do
           .group__name
@@ -26,13 +24,14 @@
     .main-header
       .main-header__left-box
         .main-header__left-box__current-group
-          aaa
+          #{@group.name}
         .main-header__left-box__member-list
           Member : 
           .main-header__left-box__member-list__member
-            aaa
+            -@group.users.each do |user|
+              #{user.name}
       .main-header__edit-button
-        Edit
+        = link_to "Edit", edit_group_path(@group)
 
     .messages
       = render 'messages'

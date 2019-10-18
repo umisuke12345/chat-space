@@ -34,7 +34,7 @@
         = link_to "Edit", edit_group_path(@group)
 
     .messages
-      = render 'messages'
+      = render @messages
       
     .form
       = form_for [@group, @message] do |f|

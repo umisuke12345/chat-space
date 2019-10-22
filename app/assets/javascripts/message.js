@@ -45,12 +45,12 @@ $(document).on("turbolinks:load", function() {
   })
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-    var last_message_id = $('.message:last').data('message_id');
+    var last_message_id = $('.message:last').data('id');
     $.ajax({
       url: "api/messages",
       type: 'get',
       dataType: 'json',
-      data: {last_id: last_message_id}
+      data: {id: last_message_id}
     })
     .done(function(messages) {
       var insertHTML = '';
